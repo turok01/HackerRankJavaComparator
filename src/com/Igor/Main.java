@@ -3,7 +3,19 @@ package com.Igor;
 import java.util.*;
 
 // Write your Checker class here
+class Checker implements Comparator{
+    @Override
+    public int compare(Object a, Object b){
 
+        if(a.score<b.score)
+            return -1;
+        else
+            if(a.score>b.score)
+                return 1;
+            else
+                return a.name.compareTo(b.name);
+    }
+}
 class Player{
     String name;
     int score;
@@ -13,6 +25,7 @@ class Player{
         this.score = score;
     }
 }
+
 
 class Solution {
 
